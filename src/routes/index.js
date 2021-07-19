@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {index,add,recibido,remove} = require('../controllers/indexController.js')
+const {index,add,crear,borrar} = require('../controllers/indexController.js')
 
 
  //index
 router.get('/',index)
 router.get('/agregar',add)
-router.post('/',recibido)
-router.get('/remove/:id',remove)
+router.post('/agregar',crear)
+router.get('/borrar/:id',borrar)
 
 module.exports=router
