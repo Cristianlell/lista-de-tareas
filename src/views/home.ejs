@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head') %>
+  <body class="mi-body">
+    <%- include('partials/header') %>
+    <article class="container-fluid conteiner">
+      <div class="row row-cols-auto d-flex flex-row  justify-content-around">
+      <%tareas.forEach(tarea => { %>
+            <div class="card mt-3 col" style="width: 18rem">
+              <div class="color rounded-top"></div>
+              <div class="card-body">
+                <h5 class="card-title"><%= tarea.titulo%></h5>
+                <p class="card-text">
+                 <%= tarea.descripcion %> 
+                </p>
+                <a href="/remove/<%= tarea.id %> " class="btn btn-danger">Borrar</a>
+              </div>
+            </div>
+            <%});%> 
+          </div>
+    </article>
+     
+    
+    <%- include('partials/footer') %>
+  </body>
+</html>
